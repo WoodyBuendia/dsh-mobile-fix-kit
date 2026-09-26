@@ -233,6 +233,18 @@ tools/
 - `02` 只影响分页大小，无安全含义。
 - 本目录**不含任何凭据**：设备 token / E2EE master key 在 `~/.dsh-remote/config.json`，不要提交。
 
+## 上游 issue
+
+本手册的四类故障里，前三条已作为 issue 提交给上游（`april-jk/dsh-mobile-plugin`），
+正文见 `upstream-issues/`：
+
+- [#2 DSH 浏览器签名 cookie 缺失](https://github.com/april-jk/dsh-mobile-plugin/issues/2)
+- [#3 中继连接半死、无看门狗](https://github.com/april-jk/dsh-mobile-plugin/issues/3)
+- [#4 单帧超中继 4 MiB 上限打死整条设备连接](https://github.com/april-jk/dsh-mobile-plugin/issues/4)
+
+**上游合并前的版本判断**：0.1.9（当前最新）既没有 cookie 处理、也没有 pong/看门狗，单帧转发逻辑未变
+⇒ 升上去会退回"打不开界面"。判据见 `upstream-issues/README.md`。
+
 ## 许可与出处
 
 - 本仓库：MIT（见 `LICENSE`）。
